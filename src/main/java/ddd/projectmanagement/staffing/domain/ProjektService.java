@@ -7,9 +7,11 @@ import org.springframework.stereotype.Service;
 public class ProjektService {
 
   private final ProjektRepository projektRepository;
+  private final EventPublisher eventPublisher;
 
-  public ProjektService(ProjektRepository projektRepository) {
+  public ProjektService(ProjektRepository projektRepository, EventPublisher eventPublisher) {
     this.projektRepository = projektRepository;
+    this.eventPublisher = eventPublisher;
   }
 
   public List<Projekt> rufeProjekteAb() {

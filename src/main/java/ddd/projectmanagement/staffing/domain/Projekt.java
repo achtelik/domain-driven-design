@@ -16,4 +16,9 @@ public class Projekt {
   public List<Ausschreibung> getAusschreibungen() {
     return ausschreibungen;
   }
+
+  public ProjektAbgeschlossenEvent projektAbschliessen() {
+    System.out.println("Domainlogik hier!");
+    return new ProjektAbgeschlossenEvent(id.toString());
+  }
 }
